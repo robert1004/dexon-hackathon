@@ -1,0 +1,16 @@
+html(lang='en')
+  head
+    block head
+    meta(charset="UTF-8")
+    title #{title}
+    script(src="/assets/js/main.js")
+    link(rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico")
+    link(rel="stylesheet" type="text/css" href="/assets/css/plugin.css")
+    link(rel="stylesheet" type="text/css" href="/assets/css/main.css")
+  body
+    block header
+      include header.pug
+    block content
+    block footer
+    include footer.pug
+    block script

@@ -1,0 +1,14 @@
+extends includes/layout.pug
+
+block head
+  - title='Writer'
+
+block content
+  form(action="")
+    | Author:
+    input(type="text")
+    | Language
+    input(type="text")
+    | Description
+    textarea(name="", cols="30", rows="10")
+    input(type="submit", value="")
