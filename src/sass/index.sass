@@ -1,10 +1,97 @@
-footer
-    width: 100%
-    height: 50px
-    position: absolute
-    bottom: 0
-    left: 0
+@import 'variable'
 
-.left, .right
-    width: 50%
-    float: left
+body
+	font-family: Centra No\.2,sans-serif
+
+ul, p
+	margin-block-start: 0
+	margin-block-end: 0
+	padding-inline-start: 0
+
+li
+	list-style: none
+
+.index-bg
+	+setImgBg('index_bg.jpg', 100%, 100vh)
+	+setFlex
+	
+	.left
+		+size(47%, 85vh)
+		border-top: 3vmin solid #fff
+		border-left: 3vmin solid #fff
+		border-bottom: 3vmin solid #fff
+		
+		.name
+			font-size: 6vmin
+			font-weight: bold
+			color: #fff
+			margin: 40vmin 0 0 12vmin
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: -3px
+				width: 42%
+				height: 2px
+				+setBg(#fff)
+
+
+	.right
+		+size(47%, 85vh)
+		background-color: rgba(#fff, .85)
+		clear: both
+
+		.logo
+			margin: 5vmin 0 0 6vmin
+			cursor: pointer
+		
+		.nav
+			+setFlex(space-between)
+			+setAuto(50%, 18vmin auto 0)
+
+			li
+				cursor: pointer
+				&:not(:last-of-type)
+					p
+						&::after
+							content: ''
+							position: absolute
+							bottom: 0
+							right: -5vmin
+							width: 1px
+							height: 15px
+							+setBg($darkBlue)
+			p
+				color: $darkBlue
+				text-align: center
+				font-size: 2vmin
+				font-weight: bolder
+				letter-spacing: .5px
+				margin-top: 1.5vmin
+				position: relative
+				
+		.search
+			width: 50%
+			margin-top: 10vmin
+			float: right
+			+setBg($darkBlue)
+			+setFlex(flex-start)
+			padding: 1vmin
+			.icon
+				margin-right: 1vmin
+			input
+				+setBg($darkBlue)
+				border: none
+				height: 5vmin
+
+
+
+
+
+footer
+	width: 100%
+	height: 50px
+	position: absolute
+	bottom: 0
+	left: 0

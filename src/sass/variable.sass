@@ -1,0 +1,28 @@
+// Variable
+$darkBlue: #2e364d
+
+
+// Mixin
+@mixin size($w, $h:$w)
+  width: $w
+  height: $h
+
+@mixin setAuto($w, $auto:auto)
+  width: $w 
+  margin: $auto
+
+@mixin setBg($color)
+  background-color: $color
+
+@mixin setImgBg($img, $w, $h, $s:100%, $rep:no-repeat, $pos:top center)
+  background-image: url("../images/#{$img}")
+  width: $w
+  height: $h
+  background-size: $s
+  background-repeat: $rep
+  background-position: $pos
+
+@mixin setFlex($hor:center, $ver:center)
+  display: flex
+  justify-content: $hor
+  align-items: $ver
