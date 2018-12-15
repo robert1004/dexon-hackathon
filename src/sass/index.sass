@@ -3,13 +3,17 @@
 body
 	font-family: Centra No\.2,sans-serif
 
-ul, p
+ul, p, h1
 	margin-block-start: 0
 	margin-block-end: 0
 	padding-inline-start: 0
+	margin: 0
 
 li
 	list-style: none
+
+a
+	text-decoration: none
 
 .index-bg
 	+setImgBg('index_bg.jpg', 100%, 100vh)
@@ -17,9 +21,9 @@ li
 	
 	.left
 		+size(47%, 85vh)
-		border-top: 3vmin solid #fff
-		border-left: 3vmin solid #fff
-		border-bottom: 3vmin solid #fff
+		border-top: 3vmin solid rgba(#fff, .85)
+		border-left: 3vmin solid rgba(#fff, .85)
+		border-bottom: 3vmin solid rgba(#fff, .85)
 		
 		.name
 			font-size: 6vmin
@@ -39,7 +43,7 @@ li
 
 	.right
 		+size(47%, 85vh)
-		background-color: rgba(#fff, .85)
+		+setBg(rgba(#fff, .85))
 		clear: both
 
 		.logo

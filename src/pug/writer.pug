@@ -1,14 +1,74 @@
-extends includes/layout.pug
+extends includes/pages-layout.pug
 
 block head
   - title='Writer'
 
-block content
-  form(action="")
-    | Author:
-    input(type="text")
-    | Language
-    input(type="text")
-    | Description
-    textarea(name="", cols="30", rows="10")
-    input(type="submit", value="")
+//- block content
+//-   form(action="")
+//-     | Author:
+//-     input(type="text")
+//-     | Language
+//-     input(type="text")
+//-     | Description
+//-     textarea(name="", cols="30", rows="10")
+//-     input(type="submit", value="")
+
+block left
+  .pages-title Writer
+  table.writer-table
+    tr
+      td Author
+      td :
+      td 
+        input
+      td Title
+      td :
+      td 
+        input
+    tr
+      td Language
+      td :
+      td
+        select
+          option(value="Abaza") Abaza
+          option(value="Chinese") Chinese
+          option(value="English") English
+      td Type
+      td :
+      td 
+        select
+          option(value="Adventure") Adventure
+          option(value="Horror") Horror
+          option(value="Romance") Romance
+    tr
+      td Price
+      td :
+      td 
+        input(placeholder='CAUTION 1')
+      td Key
+      td :
+      td 
+        input(placeholder='CAUTION 2')
+    tr
+      td Description
+      td :
+      td.des(colspan='4') 
+        input
+
+  a.next-btn(href='writer2.html')
+    span NEXT
+    i
+
+  .next-note * Please upload your files at next page
+
+
+block right
+  .writer-bg
+    a.logo(href='index.html')
+      img(src='../assets/images/logo.png')
+
+    .writer-caution
+      h2 CAUTION
+      ol
+        li The price you offered is the minimum price that you're willing to sell your book to others.
+        li Please keep your key secure. If anyone with your key can take control of your book forever.
