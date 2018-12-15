@@ -13,6 +13,13 @@ if (typeof web3 !== 'undefined') {
 const routes = require('./routes')(web3)
 const env = JSON.parse(fs.readFileSync('./config/env.json', 'utf8'))
 
+const db = require('../config/db.config.js').db;
+  
+// force: true will drop the table if it already exists
+db.sequelize.sync({force: true}).then(() => {
+  console.log('`Database & tables created!`Drop and Resync with { force: true }');
+});
+
 let app = express()
 app.use('/api', routes)
 app.use(express.static('public'))
