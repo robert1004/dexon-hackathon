@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 
 let app = express()
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 var web3
 
