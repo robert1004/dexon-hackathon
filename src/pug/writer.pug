@@ -3,16 +3,6 @@ extends includes/pages-layout.pug
 block head
   - title='Writer'
 
-//- block content
-//-   form(action="")
-//-     | Author:
-//-     input(type="text")
-//-     | Language
-//-     input(type="text")
-//-     | Description
-//-     textarea(name="", cols="30", rows="10")
-//-     input(type="submit", value="")
-
 block left
   .pages-title Writer
   table.writer-table
@@ -20,11 +10,11 @@ block left
       td Author
       td :
       td 
-        input
+        input(type="text")
       td Title
       td :
       td 
-        input
+        input(type="text")
     tr
       td Language
       td :
@@ -44,16 +34,16 @@ block left
       td Price
       td :
       td 
-        input(placeholder='CAUTION 1')
+        input(placeholder='CAUTION 1' type='number')
       td Key
       td :
       td 
-        input(placeholder='CAUTION 2')
+        input(placeholder='CAUTION 2' type="text")
     tr
       td Description
       td :
       td.des(colspan='4') 
-        input
+        textarea(name="description", cols="60", rows="6")
 
   a.next-btn(href='writer2.html')
     span NEXT
