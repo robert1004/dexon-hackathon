@@ -31,12 +31,15 @@
       padding: 1.5vmin 1vmin
     select
       height: 5.7vmin
+    textarea
+      font-size: 2vmin
+      padding: 1vmin
 
-.next-btn
+.next-btn, .upload-btn
   +setFlex
   +setBg($lightRed)
   color: #fff
-  +setAuto(20%, 5vmin auto 0)
+  +setAuto(20%, 3vmin auto 0)
   padding: 2vmin 3vmin
   font-size: 3vmin
   letter-spacing: .1em
@@ -73,6 +76,9 @@
       border-radius: 50%
       +size(5px)
       transition: .3s ease
+
+.upload-btn
+  +setAuto(26%, 3vmin auto 0)
 
 .next-note
   margin-top: 3vmin
@@ -112,4 +118,46 @@
     letter-spacing: .5px
     color: $darkBlue
     margin-bottom: 3vmin
+
+.writer2-bg
+  +setImgBg('writer_bg02.jpg', 100%, 100%, 100% 100%)
+
+.upload
+  margin-left: 3rem
+
+.upload-file
+  margin-bottom: 2vmin
+  
+  label
+    position: relative
+
+  #cover, #preview, #book
+    position: absolute
+    left: 0
+    top: 0
+    opacity: 0
+
+  .title
+    font-size: 3vmin
+    letter-spacing: .05em
+    color: #fff
+    width: 27%
+    display: inline-block
+    margin-right: 2vmin;
+
+  #btn
+    margin-right: 3vmin
+    +setBg($darkBlue)
+    color: #fff
+    font-size: 2.5vmin
+    letter-spacing: .05em
+    padding: 1.5vmin 3vmin
+    border: none
+    cursor: pointer
+
+  #text
+    color: red
+    font-size: 3vmin
+    letter-spacing: .05em
+    color: $lightOrange
 
