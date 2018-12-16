@@ -1,24 +1,23 @@
 let routes = require('express').Router()
 
-module.exports = function(web3) {
+module.exports = function() {
  
     const writers = require('../controller/writer.controller.js');
  
     // Create a new Customer
-    routes.post('/api/books', writers.create);
+    routes.post('/books', writers.create);
  
     // Retrieve all Customer
-    routes.get('/api/books/all', writers.findAll);
+    routes.get('/books/all', writers.findAll);
  
     // Retrieve a single Customer by Id
-    routes.get('/api/books/type', writers.findAllType);
- 
-    // Retrieve a Customer with Id
-    routes.get('/api/books/:writerId', writers.findById);
+    routes.get('/books/type', writers.findAllType);
 
     // Retrieve a Customer with Id
-    routes.get('/api/books/name', writers.findByName);
-    
+    routes.get('/books/search', writers.searchName);
+ 
+    // Retrieve a Customer with Id
+    routes.get('/books/:writerId', writers.findById);
 
     return routes;
 }
