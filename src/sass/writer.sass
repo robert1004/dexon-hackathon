@@ -1,0 +1,163 @@
+@import 'variable'
+
+.writer-table
+  width: 100%
+
+  td
+    font-size: 3vmin
+    letter-spacing: 1px
+    color: #fff
+    margin-bottom: 2vmin
+    padding: 1vmin 0
+    vertical-align: top
+
+    &:nth-of-type(2), &:nth-of-type(5)
+      padding: 1vmin
+    &:nth-of-type(3)
+      input, select
+        width: 95%
+
+    &.des
+      input
+        height: 15vmin
+        width: 100%
+
+    input, select
+      width: 100%
+      border-radius: 0
+      background-color: #fff
+      font-size: 2vmin
+    input
+      padding: 1.5vmin 1vmin
+    select
+      height: 5.7vmin
+    textarea
+      font-size: 2vmin
+      padding: 1vmin
+
+.next-btn, .upload-btn
+  +setFlex
+  +setBg($lightRed)
+  color: #fff
+  +setAuto(20%, 3vmin auto 0)
+  padding: 2vmin 3vmin
+  font-size: 3vmin
+  letter-spacing: .1em
+  cursor: pointer
+  &:hover
+    i
+      &::before
+        +size(5px)
+        +setBg(#fff)
+        z-index: 1
+        transition: .3s ease
+      &::after
+        +setBg($lightRed)
+        +size(30px)
+        transition: .3s ease
+  i
+    +size(28px)
+    border: 2px solid #ffffff
+    border-radius: 50%
+    display: inline-flex
+    margin-left: 3vmin
+    position: relative
+    &::before
+      content: ''
+      @extend %posAbs
+      +setBg(#fff)
+      border-radius: 50%
+      +size(30px)
+      transition: .3s ease
+    &::after
+      content: ''
+      @extend %posAbs
+      +setBg($lightRed)
+      border-radius: 50%
+      +size(5px)
+      transition: .3s ease
+
+.upload-btn
+  +setAuto(26%, 3vmin auto 0)
+
+.next-note
+  margin-top: 3vmin
+  text-align: center
+  font-size: 2vmin
+  letter-spacing: 1px
+  color: $lightRed
+  text-shadow: 1px 1px $darkRed
+
+
+.writer-bg
+  +setImgBg('writer_bg01.jpg', 100%, 100%, 100% 100%)
+
+.writer-caution
+  margin: 6vmin 14vmin 0
+  h2
+    color: $lightRed
+    letter-spacing: .05em
+    position: relative
+    text-align: center
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 50%
+      +size(50px, 2px)
+      +setBg($lightRed)
+      
+    &::before
+      left: 25%
+    &::after
+      right: 25%
+
+  li
+    list-style: decimal
+    font-size: 3vmin
+    line-height: 4vmin
+    letter-spacing: .5px
+    color: $darkBlue
+    margin-bottom: 3vmin
+
+.writer2-bg
+  +setImgBg('writer_bg02.jpg', 100%, 100%, 100% 100%)
+
+.upload
+  margin-left: 3rem
+
+.upload-file
+  margin-bottom: 2vmin
+  
+  label
+    position: relative
+
+  #cover, #preview, #book
+    position: absolute
+    left: 0
+    top: 0
+    opacity: 0
+
+  .title
+    font-size: 3vmin
+    letter-spacing: .05em
+    color: #fff
+    width: 27%
+    display: inline-block
+    margin-right: 2vmin;
+
+  #btn
+    margin-right: 3vmin
+    +setBg($darkBlue)
+    color: #fff
+    font-size: 2.5vmin
+    letter-spacing: .05em
+    padding: 1.5vmin 3vmin
+    border: none
+    cursor: pointer
+
+  #text
+    color: red
+    font-size: 3vmin
+    letter-spacing: .05em
+    color: $lightOrange
+
